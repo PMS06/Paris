@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paris</title>
+    <link rel="stylesheet" href="animate.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <!-- Navigation List -->
+    <nav>
+      <!-- Left side navigation list -->
+      <ul class="left-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+      </ul>
+      <!-- Placing logo in the middle of the nav list -->
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Paris Logo" />
+      </a>
+      <!-- Right side navigation list -->
+      <ul class="right-nav">
+        <li><a href="accommodation.html">Accomodation</a></li>
+        <li><a href="food.html">Food</a></li>
+      </ul>
+    </nav>
+    <!-- Banner section including background image and texts -->
+    <div class="banner">
+      <img src="images/paris.jpg" alt="Banner Image" />
+      <div class="banner-text">
+        <!-- The heading with typing animation -->
+        <h1><span class="auto-type"></span></h1>
+        <!-- Subtitle -->
+        <p>Paris est à proprement dire toute la France</p>
+      </div>
+    </div>
+    <!-- Main Container for the entire image slider and descriptrions -->
+    <div class="container">
+      <div class="content">
+        <!-- Description container for different attractions -->
+        <div class="description-container">
+          <!-- The container for the description and the heading -->
+          <div class="description active">
+            <p>
+              What would Paris be without its symbolic Eiffel Tower? Built by
+              Gustave Eiffel to commemorate the centenary of the French
+              Revolution, it is presented at the Exposition Universelle in Paris
+              in 1889. 324 meters high, it is one of the most visited monuments
+              in the world with nearly 7 million visitors a year.
+            </p>
+            <h3>Eiffel Tower</h3>
+          </div>
+          <div class="description">
+            <p>
+              One of the most enduring symbols of Paris: Notre-Dame de Paris,
+              also known as Notre Dame, a Roman Catholic cathedral is located on
+              the eastern half of the Ile de la Cité. It is widely considered
+              one of the finest examples of French Gothic architecture in France
+              and Europe. Begun in 1163 and completed in 1345, this cathedral is
+              a sight with its portals surrounded by his many sculptures and
+              gargoyles that adorn the roof.
+            </p>
+            <h3>Notre Dame Cathedral</h3>
+          </div>
+          <div class="description">
+            <p>
+              The Louvre is the most visited art museum in the world. Located in
+              the heart of Paris, this historic building is a former royal
+              palace, with an area of 210,000 square meters including 60,600 for
+              the exhibitions. The museum is housed in the Louvre, originally a
+              fortress built in the late 12th century under Philip II. The
+              remains of the fortress are visible in the basement of the museum.
+            </p>
+            <h3>Louvre Museum</h3>
+          </div>
+          <div class="description">
+            <p>
+              Under the spell of ancient Roman architecture, Napoleon
+              commissioned Jean Chalgrin the design of a triumphal arch
+              dedicated to the glory of imperial armies. Built in the 19th
+              century, it is the largest monument of its kind in the world.
+              Impressive sculptures adorn its pillars. In addition, the names of
+              558 generals and the great victories are engraved on the top of
+              the arc. Under the Arc de Triomphe is the Tomb of the Unknown
+              Soldier of France.
+            </p>
+            <h3>Champs Elysées / Arc of Triumph</h3>
+          </div>
+        </div>
+        <!-- Image container for different Parisian attractions -->
+        <div class="img-container">
+          <!-- Images for each attraction, the class 'active' means the image that is currently displayed-->
+          <img src="images/image2.webp" class="active" alt="..." />
+          <img src="images/image1.webp" alt="..." />
+          <img src="images/image3..webp" alt="..." />
+          <img src="images/image4.webp" alt="..." />
+        </div>
+      </div>
+    </div>
+    <!-- Section for places to visit -->
+    <div class="heading1 wow animate__fadeInLeft" data-wow-duration="2s">
+      <p>Places To Visit</p>
+    </div>
+    <!-- Google Map -->
+    <div id="map" class="wow animate__fadeInRight" data-wow-duration="2s"></div>
+    <!-- Call to action section -->
+    <section
+      id="call-to-action"
+      class="wow animate__fadeInUp"
+      data-wow-duration="2s"
+    >
+      <div class="container">
+        <div class="cta-item">
+          <h2>History</h2>
+          <p>Explore the history of Paris.</p>
+          <a href="history.html" class="cta-btn">See More</a>
+        </div>
+        <div class="cta-item">
+          <h2>Accomodation</h2>
+          <p>Find out the types of accommodation in Paris</p>
+          <a href="accommodation.html" class="cta-btn">See More</a>
+        </div>
+        <div class="cta-item">
+          <h2>Food</h2>
+          <p>See the various kinds of food and Nightlife in Paris</p>
+          <a href="food.html" class="cta-btn">See More</a>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <!-- Copy right sign -->
+        <p>&copy; 2023 - All Rights Reserved</p>
+      </div>
+    </footer>
+    <!-- wow js script to trigger the animations -->
+    <script src="wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <!-- Typing animation npm package -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="main.js"></script>
+    <!-- Google Map API Key script-->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByGhgA8l6SSvJo6Emp5WIqoor8Q_NQOs4&callback=initMap"
+    ></script>
+  </body>
+</html>

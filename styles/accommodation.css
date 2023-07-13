@@ -1,0 +1,71 @@
+/* Full width for accommodations */
+.accommodations {
+    width: 100%;
+}
+
+/* Flex layout for accommodation item */
+.accommodation-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Margin for h2 elements */
+h2{
+    margin-bottom: 2rem;
+}
+
+/* Margin and line-height for p elements */
+p{
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+/* Flex item with padding and justified text for accommodation text */
+.accommodation-text {
+    flex: 1;
+    padding: 5rem;
+    text-align: justify;
+}
+
+/* Centered flex item for accommodation image */
+.accommodation-image {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Reversed flex layout with black/white color for reverse class */
+.reverse {
+    flex-direction: row-reverse;
+    background-color: black;
+    color: white;
+}
+
+/* Button style */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    background-color: rgb(7, 79, 195);
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Button hover effect */
+.btn:hover{
+    background-color: #fff;
+    color:  rgb(7, 79, 195);
+    border: 1px solid  rgb(7, 79, 195);
+}
+
+/* Image sizing and fitting */
+img{
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+

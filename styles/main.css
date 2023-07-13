@@ -1,0 +1,243 @@
+/* Global style for cross browser compatibility and remove the unecessary margin */
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Animation for the see more button in the call-to-action section */
+@keyframes softBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Alignment of Navigation menu */
+nav {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* Removing the bullet point list from unorganized list */
+ul {
+    list-style-type: none;
+    padding: 0;
+   
+}
+
+ul.left-nav, ul.right-nav {
+    display: flex;
+}
+
+/* Give some space between each list */
+ul.left-nav li, ul.right-nav li {
+    margin: 0 15px; 
+}
+
+/* Removing the underline from the links */
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Styling the logo in the middle of the  navigation bar*/
+a.logo img {
+    height: 70px; 
+    object-fit: cover;
+    object-position: center;
+    background-color: #fff;
+    width: 70px;
+    border-radius: 60px;
+    margin-bottom: -10px;
+}
+
+/* Styling for the banner section */
+.banner {
+    position: relative;
+    width: 100%;
+    max-height: 500px; 
+    overflow: hidden;
+    object-fit: contain;
+    object-position: center;
+}
+
+ /* Framing the banner image and blurring the image so that the text in the banner stands out */
+.banner img {
+    width: 100%;
+    height: auto;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+/* Align the banner text to be in the middle of the banner */
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Styling for the banner heading text as well as adding text shadow*/
+.banner-text h1{
+    font-size: 3rem; 
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+/* Styling for the subtitle */
+.banner-text p{
+    margin-top: 10px;
+    font-size: 15px; 
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+/* Image slider container alignment */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    min-height: 300px;
+    color: white;
+    padding-bottom: 35px;
+   
+  }
+
+   /* Wrap the description container and image container and create a space between each other*/
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+  }
+  
+  /*  Container Frame for description  */
+  .description-container {
+    width: 45%;
+    position: relative;
+    min-height: 200px; 
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+  /* Container Frame for image  */
+  .img-container{
+    width: 300px;
+    position: relative;
+    min-height: 200px;
+  }
+  
+  /* Animation and transition styles for the descriptions and images and fill their respective container  */
+  .description, .img-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+  
+ /* Setting active descriptions and images to be fully visible and centered */
+.description.active, .img-container img.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Adding spacing under paragraphs inside active descriptions */
+.description.active p {
+  margin-bottom: 20px;
+}
+
+/* Ensuring images inside .img-container are responsive and cover their container */
+.img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Centering text and adding margin on top for .heading1 */
+.heading1 {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Styling for paragraph text inside heading1 */
+.heading1 p {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Setting dimensions and margins for Google Maps container */
+#map {
+  height: 400px;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 2rem;
+}
+
+/* Styling call-to-action section with black background, white text, and padding */
+#call-to-action {
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+}
+
+/* Layout for container inside call-to-action section using flexbox, setting max-width and centering it */
+#call-to-action .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Making call-to-action items equal width and centering text */
+#call-to-action .cta-item {
+  flex: 1;
+  text-align: center;
+}
+
+/* Adding space below h2 inside each call-to-action item */
+.cta-item h2 {
+  margin-bottom: 15px;
+}
+
+/* Styling call-to-action button with hover effect */
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Adding hover effect to button */
+.cta-btn:hover {
+  background-color: #eee;
+  animation: softBounce 0.5s;
+}
+
+/* Setting the position and style of the footer */
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #666;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+}
+
